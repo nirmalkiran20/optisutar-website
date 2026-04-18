@@ -1,4 +1,16 @@
-"use client";
+import type { Metadata } from "next";
+
+export const aboutMetadata: Metadata = {
+  title: "About Us | AI-First Digital Marketing Agency in Pune",
+  description:
+    "Learn about Optisutar — a Pune-based digital marketing agency helping brands win in AI search, Google, and beyond. Meet our team and discover our mission.",
+  alternates: { canonical: "https://optisutar.com/about" },
+  openGraph: {
+    title: "About Optisutar | AI-First Digital Marketing Agency",
+    description: "We help brands stay visible in the age of AI search. Learn about our team, values and approach.",
+    url: "https://optisutar.com/about",
+  },
+};
 
 import Link from "next/link";
 

@@ -1,4 +1,16 @@
-"use client";
+import type { Metadata } from "next";
+
+export const contactMetadata: Metadata = {
+  title: "Contact Us | Get a Free SEO Audit",
+  description:
+    "Get in touch with Optisutar for a free SEO audit and digital marketing consultation. Based in Pune, serving clients across India and globally.",
+  alternates: { canonical: "https://optisutar.com/contact" },
+  openGraph: {
+    title: "Contact Optisutar | Free SEO Audit",
+    description: "Book a free audit and find out exactly where your brand stands in search and AI results.",
+    url: "https://optisutar.com/contact",
+  },
+};
 
 import { useState } from "react";
 

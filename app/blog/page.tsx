@@ -1,4 +1,16 @@
-"use client";
+import type { Metadata } from "next";
+
+export const blogMetadata: Metadata = {
+  title: "Blog | SEO, AI SEO, GEO & Digital Marketing Insights",
+  description:
+    "Read the latest insights on AI SEO, GEO, AEO, PPC and digital marketing strategy from the Optisutar team.",
+  alternates: { canonical: "https://optisutar.com/blog" },
+  openGraph: {
+    title: "Optisutar Blog | AI-First Marketing Insights",
+    description: "Strategy, trends and actionable guides on AIO, GEO, AEO, SEO, PPC and beyond.",
+    url: "https://optisutar.com/blog",
+  },
+};
 
 import Link from "next/link";
 
