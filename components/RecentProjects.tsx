@@ -1,9 +1,39 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+
+const resultBadges: { [key: number]: { label: string; color: string }[] } = {
+  1: [
+    { label: "300% Traffic", color: "#34A853" },
+    { label: "Page 1 Rankings", color: "#4285F4" },
+    { label: "SEO", color: "#FF6B35" },
+    { label: "Link Building", color: "#9333EA" },
+    { label: "6 Months", color: "#FF9500" },
+  ],
+  2: [
+    { label: "5x ROAS", color: "#34A853" },
+    { label: "Google Ads", color: "#4285F4" },
+    { label: "-40% CPC", color: "#FF6B35" },
+    { label: "PPC", color: "#9333EA" },
+    { label: "Local Business", color: "#FF9500" },
+  ],
+  3: [
+    { label: "40 Keywords", color: "#34A853" },
+    { label: "Page 1", color: "#4285F4" },
+    { label: "60+ Articles", color: "#FF6B35" },
+    { label: "Content SEO", color: "#9333EA" },
+    { label: "B2B SaaS", color: "#FF9500" },
+  ],
+  4: [
+    { label: "+200% Calls", color: "#34A853" },
+    { label: "Local SEO", color: "#4285F4" },
+    { label: "GMB", color: "#FF6B35" },
+    { label: "Citations", color: "#9333EA" },
+    { label: "Healthcare", color: "#FF9500" },
+  ],
+};
 
 const RecentProjects = () => {
   return (
@@ -42,26 +72,26 @@ const RecentProjects = () => {
 
               <p
                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
+                style={{ color: "#BEC1DD", margin: "1vh 0" }}
               >
                 {item.des}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
+                {/* Result badges instead of tech icons */}
+                <div className="flex items-center gap-1 flex-wrap max-w-[60%]">
+                  {resultBadges[item.id]?.slice(0, 3).map((badge, index) => (
+                    <span
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="text-xs px-2 py-1 rounded-full font-medium"
                       style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
+                        backgroundColor: `${badge.color}22`,
+                        color: badge.color,
+                        border: `1px solid ${badge.color}44`,
                       }}
                     >
-                      <img src={icon} alt="icon" className="p-2" />
-                    </div>
+                      {badge.label}
+                    </span>
                   ))}
                 </div>
 

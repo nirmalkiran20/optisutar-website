@@ -1,9 +1,19 @@
 "use client";
 
 import React from "react";
-
-import { companies, testimonials } from "@/data";
+import { testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
+
+const tools = [
+  { name: "SEMrush", color: "#FF6B35" },
+  { name: "Ahrefs", color: "#FF9500" },
+  { name: "Google Analytics 4", color: "#E8710A" },
+  { name: "Google Search Console", color: "#4285F4" },
+  { name: "Google Ads", color: "#34A853" },
+  { name: "Hotjar", color: "#FF3C00" },
+  { name: "Screaming Frog", color: "#7B2D8B" },
+  { name: "Moz Pro", color: "#00A3E0" },
+];
 
 const Clients = () => {
   return (
@@ -14,10 +24,7 @@ const Clients = () => {
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
-        <div
-          // remove bg-white dark:bg-black dark:bg-grid-white/[0.05], h-[40rem] to 30rem , md:h-[30rem] are for the responsive design
-          className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
-        >
+        <div className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
@@ -25,24 +32,29 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-10 w-5"
+        {/* Tools we use */}
+        <div className="mt-10 w-full">
+          <p className="text-center text-white/40 text-sm mb-6 uppercase tracking-widest">
+            Tools we use
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            {tools.map((tool) => (
+              <div
+                key={tool.name}
+                className="px-4 py-2 rounded-full border border-white/10 bg-[#10132E] text-sm font-medium text-white/80 hover:border-white/30 hover:text-white transition duration-200"
+                style={{
+                  boxShadow: `0 0 12px ${tool.color}22`,
+                  borderColor: `${tool.color}33`,
+                }}
+              >
+                <span
+                  className="inline-block w-2 h-2 rounded-full mr-2"
+                  style={{ backgroundColor: tool.color }}
                 />
-                <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
-                />
+                {tool.name}
               </div>
-            </React.Fragment>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
