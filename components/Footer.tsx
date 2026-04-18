@@ -66,13 +66,12 @@ const Footer = () => {
           {/* Brand col */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                O
-              </div>
-              <span className="text-white font-bold text-lg tracking-tight group-hover:text-indigo-300 transition-colors">
-                Optisutar
-              </span>
-            </Link>
+  <img
+    src="/logo.png"
+    alt="Optisutar Logo"
+    className="h-8 w-auto object-contain"
+  />
+</Link>
             <p className="text-white/40 text-sm leading-relaxed mb-5">
               Next-generation digital marketing for brands that want to win in AI search, local results, and beyond.
             </p>
