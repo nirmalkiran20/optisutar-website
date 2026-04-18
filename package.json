@@ -8,11 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "@react-three/drei": "^9.105.4",
-    "@react-three/fiber": "^8.16.2",
-    "@tabler/icons-react": "^3.1.0",
-    "@types/three": "^0.163.0",
+  "dependencies": {   
+    "@tabler/icons-react": "^3.1.0",    
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.25",
@@ -25,9 +22,7 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7",
-    "three": "0.155.0",
-"three-globe": "2.27.2"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
-const GridGlobe = dynamic(() => import("./GridGlobe"), { ssr: false });
+
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
@@ -129,7 +129,13 @@ const rightLists = ["GSC", "Ads", "Hotjar"];
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
+          {id === 2 && (
+  <div className="flex items-center justify-center h-full">
+    <p className="text-white text-center text-sm font-semibold px-4">
+      🌏 Serving clients across India & globally
+    </p>
+  </div>
+)}
 
           {/* Tech stack list div */}
           {id === 3 && (
