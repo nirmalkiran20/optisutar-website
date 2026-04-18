@@ -22,21 +22,15 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      const direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
@@ -44,19 +38,11 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
         className={cn(
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-3 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-between",
+          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-3 rounded-lg items-center justify-between",
           className
         )}
         style={{
@@ -64,13 +50,14 @@ export const FloatingNav = ({
           backgroundColor: "rgba(17, 25, 40, 0.75)",
           borderRadius: "12px",
           border: "1px solid rgba(255, 255, 255, 0.125)",
+          boxShadow: "0px 2px_3px_-1px_rgba(0,0,0,0.1)",
         }}
       >
-        {/* Logo on the left */}
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-2 mr-8">
           <Image
             src="/logo.png"
-            alt="Optisutar Logo"
+            alt="Optisutar - SEO & Digital Marketing Agency"
             width={32}
             height={32}
             className="rounded-md"
@@ -82,27 +69,23 @@ export const FloatingNav = ({
 
         {/* Nav links */}
         <div className="flex items-center space-x-6">
-          {navItems.map((navItem: any, idx: number) => (
+          {navItems.map((navItem, idx) => (
             <Link
-              key={`link=${idx}`}
+              key={idx}
               href={navItem.link}
-              className={cn(
-                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-              )}
+              className="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 transition-colors duration-200"
             >
               <span className="block sm:hidden">{navItem.icon}</span>
-              <span className="text-sm !cursor-pointer">{navItem.name}</span>
+              <span className="text-sm cursor-pointer">{navItem.name}</span>
             </Link>
           ))}
         </div>
 
-        {/* CTA button on the right */}
+        {/* CTA — links to /contact */}
         <Link
-          href="#contact"
-          className="ml-8 text-sm font-medium px-4 py-2 rounded-lg text-white hidden sm:block"
-          style={{
-            background: "linear-gradient(90deg, #10b981, #059669)",
-          }}
+          href="/contact"
+          className="ml-8 text-sm font-medium px-4 py-2 rounded-lg text-white hidden sm:block hover:opacity-90 transition-opacity duration-200"
+          style={{ background: "linear-gradient(90deg, #10b981, #059669)" }}
         >
           Free Audit
         </Link>
