@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = {
@@ -89,7 +89,13 @@ const Footer = () => {
           {/* Brand col */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 w-fit">
-              <img src="/logo.png" alt="Optisutar Logo" className="h-8 w-auto object-contain" />
+              <Image
+  src="/logo.png"
+  alt="Optisutar — AI-First Digital Marketing Agency"
+  width={120}
+  height={32}
+  className="h-8 w-auto object-contain"
+/>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-5">
               Next-generation digital marketing for brands that want to win in AI search, local results, and beyond.
