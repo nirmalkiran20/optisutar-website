@@ -38,27 +38,32 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{ opacity: 1, y: -100 }}
-        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
-        className={cn(
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-3 rounded-lg items-center justify-between",
-          className
-        )}
-        style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
-          borderRadius: "12px",
-          border: "1px solid rgba(255, 255, 255, 0.125)",
-          boxShadow: "0px 2px_3px_-1px_rgba(0,0,0,0.1)",
-        }}
-      >
+  initial={{ opacity: 1, y: -100 }}
+  animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+  transition={{ duration: 0.2 }}
+  className={cn(
+    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-3 rounded-xl items-center justify-between",
+    "border border-white/15 bg-white/6 backdrop-blur-xl shadow-2xl",
+    className
+  )}
+  style={{
+    backdropFilter: "blur(20px) saturate(180%)",
+    WebkitBackdropFilter: "blur(20px) saturate(180%)",
+    background:
+      "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
+    border: "1px solid rgba(255, 255, 255, 0.15)",
+    boxShadow:
+      "0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2)",
+  }}
+>
+  {/* 🔥 Optional glow layer */}
+  <div className="absolute inset-0 -z-10 blur-2xl opacity-20 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500" />
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 mr-8">
           <Image
             src="/logo.png"
             alt="Optisutar - SEO & Digital Marketing Agency"
-            width={32}
+            width={35}
             height={32}
             className="rounded-md"
           />
