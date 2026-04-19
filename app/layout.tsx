@@ -7,7 +7,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://optisutar.com"),

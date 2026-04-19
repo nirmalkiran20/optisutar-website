@@ -82,11 +82,11 @@ const WhatsAppButton = () => {
 
 // Per-card image config
 const cardImages: Record<number, { src: string; position: string }> = {
-  1: { src: "/card4.jpg", position: "object-center" },
+  1: { src: "/card7.webp", position: "object-center" },
   2: { src: "/card3.jpg", position: "object-center" },
   3: { src: "/card2.jpg", position: "object-center" },
   4: { src: "/card5.jpg", position: "object-center" },
-  5: { src: "/card1.jpg", position: "object-center" },
+  5: { src: "/card6.webp", position: "object-center" },
 };
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => (
