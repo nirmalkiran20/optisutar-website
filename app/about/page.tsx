@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
-export const aboutMetadata: Metadata = {
-  title: "About Us | AI-First Digital Marketing Agency in Pune",
+export const metadata: Metadata = {
+  title: "About Us | AI-First Digital Marketing Agency",
   description:
-    "Learn about Optisutar — a Pune-based digital marketing agency helping brands win in AI search, Google, and beyond. Meet our team and discover our mission.",
+    "Learn about Optisutar — an AI-first digital marketing agency helping brands win in Google, ChatGPT, Gemini and beyond. Meet our team and discover our mission.",
   alternates: { canonical: "https://optisutar.com/about" },
   openGraph: {
     title: "About Optisutar | AI-First Digital Marketing Agency",
-    description: "We help brands stay visible in the age of AI search. Learn about our team, values and approach.",
+    description:
+      "We help brands stay visible and competitive in the age of AI search. Learn about our team, values and approach.",
     url: "https://optisutar.com/about",
   },
 };
-
-import Link from "next/link";
 
 const stats = [
   { value: "150+", label: "Clients Served" },
@@ -26,42 +26,42 @@ const values = [
     icon: "🎯",
     title: "Results First",
     description:
-      "Every strategy we build is tied to measurable outcomes. No vanity metrics — just growth that shows up in your revenue.",
+      "Every strategy we build is tied to measurable outcomes. No vanity metrics — just growth that shows up in your revenue and your bottom line.",
     color: "#a78bfa",
   },
   {
     icon: "🤖",
     title: "AI-Native Thinking",
     description:
-      "We don't bolt AI onto old strategies. We build from the ground up for a world where ChatGPT, Gemini, and Perplexity are how people search.",
+      "We don't bolt AI onto old strategies. We build from the ground up for a world where ChatGPT, Gemini and Perplexity are how people search.",
     color: "#38bdf8",
   },
   {
     icon: "🔍",
     title: "Radical Transparency",
     description:
-      "You'll always know exactly what we're doing and why. Clear reporting, honest timelines, no smoke and mirrors.",
+      "You'll always know exactly what we're doing and why. Clear reporting, honest timelines, no smoke and mirrors — ever.",
     color: "#4ade80",
   },
   {
     icon: "⚡",
     title: "Speed & Agility",
     description:
-      "Digital moves fast. We stay ahead of algorithm updates, platform changes, and AI shifts so you never fall behind.",
+      "Digital moves fast. We stay ahead of algorithm updates, platform changes and AI shifts so your brand never falls behind the curve.",
     color: "#fb923c",
   },
   {
     icon: "🤝",
     title: "True Partnership",
     description:
-      "We're not a vendor — we're an extension of your team. Your goals become our goals, and we show up accordingly.",
+      "We're not a vendor — we're an extension of your team. Your goals become our goals, and we show up every day with that mindset.",
     color: "#f472b6",
   },
   {
     icon: "📈",
     title: "Long-Term Vision",
     description:
-      "Quick wins are nice, but we build for compounding growth. Every action we take is an investment in your brand's future.",
+      "Quick wins are nice, but we build for compounding growth. Every action we take is a deliberate investment in your brand's long-term future.",
     color: "#facc15",
   },
 ];
@@ -107,7 +107,7 @@ export default function AboutPage() {
           </span>
         </h1>
         <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-          Optisutar is a next-generation digital marketing agency built for brands that want to stay visible, competitive, and growing — not just today, but in the AI-first future.
+          Optisutar is a next-generation digital marketing agency built for brands that want to stay visible, competitive and growing — not just today, but deep into the AI-first future.
         </p>
       </section>
 
@@ -131,7 +131,6 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="max-w-6xl mx-auto px-6 mb-24">
         <div className="grid md:grid-cols-2 gap-6 items-center">
-          {/* Text */}
           <div>
             <p className="text-xs text-white/30 uppercase tracking-widest font-semibold mb-4">
               Our Mission
@@ -143,10 +142,10 @@ export default function AboutPage() {
               The search landscape is undergoing its biggest shift in two decades. AI-powered tools are now the first stop for millions of consumers — and most brands aren't showing up there at all.
             </p>
             <p className="text-white/50 leading-relaxed mb-4">
-              Optisutar exists to change that. We combine deep technical SEO expertise with cutting-edge AI optimisation strategies — helping businesses appear not just in Google, but in ChatGPT, Gemini, Perplexity, and every AI surface where your customers are looking.
+              Optisutar exists to change that. We combine deep technical SEO expertise with cutting-edge AI optimisation strategies — helping businesses appear not just in Google, but in ChatGPT, Gemini, Perplexity and every AI surface where your customers are searching.
             </p>
             <p className="text-white/50 leading-relaxed">
-              From local businesses to global brands, we build strategies that compound over time and deliver results you can actually measure.
+              From local businesses to scaling brands, we build strategies that compound over time and deliver results you can actually measure. No fluff. No vanity metrics. Just growth.
             </p>
           </div>
 
@@ -177,9 +176,7 @@ export default function AboutPage() {
           <p className="text-xs text-white/30 uppercase tracking-widest font-semibold mb-3">
             How We Work
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Our Core Values
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Our Core Values</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {values.map((value) => (
@@ -207,7 +204,7 @@ export default function AboutPage() {
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Meet the Team</h2>
           <p className="text-white/40 mt-3 max-w-lg mx-auto text-sm">
-            A tight-knit group of strategists, engineers, and creatives obsessed with digital growth.
+            A tight-knit group of strategists, engineers and creatives who are genuinely obsessed with digital growth.
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -247,7 +244,7 @@ export default function AboutPage() {
             Ready to Grow Your Brand?
           </h2>
           <p className="text-white/40 mb-8 max-w-md mx-auto text-sm">
-            Book a free audit and find out exactly where your brand stands — and how we'll get you where you want to be.
+            Book a free audit and find out exactly where your brand stands in search and AI results — and how we'll get you where you want to be.
           </p>
           <Link
             href="/contact"
