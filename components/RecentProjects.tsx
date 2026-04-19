@@ -75,7 +75,7 @@ const RecentProjects = () => {
             key={post.id}
             className="h-[32rem] w-[22rem] flex items-center justify-center"
           >
-            <PinContainer title="Read Article" href={post.href}>
+            <PinContainer title="Visit" href={post.href}>
               <div className="flex flex-col w-[20rem] h-[25rem]">
 
                 {/* Image area */}
