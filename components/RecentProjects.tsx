@@ -3,6 +3,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { PinContainer } from "./ui/Pin";
 import Link from "next/link";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -11,8 +12,8 @@ const blogPosts = [
     des: "ChatGPT, Gemini, and Perplexity are changing how people find information. Here's what that means for your brand.",
     category: "AIO",
     categoryColor: "#a78bfa",
-    emoji: "🤖",
-    href: "/blog",
+    image: "/blog-aio.jpg",
+    href: "/blog/how-ai-is-rewriting-search-optimisation-2025",
   },
   {
     id: 2,
@@ -20,8 +21,8 @@ const blogPosts = [
     des: "Generative Engine Optimisation is not a replacement for SEO — it's the next layer. Learn how they work together.",
     category: "GEO",
     categoryColor: "#38bdf8",
-    emoji: "🌐",
-    href: "/blog",
+    image: "/blog-geo.webp",
+    href: "/blog/geo-vs-seo-difference",
   },
   {
     id: 3,
@@ -29,8 +30,8 @@ const blogPosts = [
     des: "Voice search, featured snippets, and AI overviews — AEO ensures your content is the answer, not just a result.",
     category: "AEO",
     categoryColor: "#f472b6",
-    emoji: "🎯",
-    href: "/blog",
+    image: "/blog-aeo.jpg",
+    href: "/blog/complete-guide-answer-engine-optimisation",
   },
   {
     id: 4,
@@ -38,8 +39,8 @@ const blogPosts = [
     des: "With automation taking over, human strategy matters more than ever. Here's how to stay ahead of the algorithm.",
     category: "PPC",
     categoryColor: "#fb923c",
-    emoji: "📈",
-    href: "/blog",
+    image: "/blog-ppc.jpg",
+    href: "/blog/google-ppc-smart-bidding-2025",
   },
   {
     id: 5,
@@ -47,8 +48,8 @@ const blogPosts = [
     des: "An unoptimised GMB profile is invisible. Here's the exact checklist we use to get clients ranking in the local 3-pack.",
     category: "GMB",
     categoryColor: "#4ade80",
-    emoji: "📍",
-    href: "/blog",
+    image: "/blog-gmb.webp",
+    href: "/blog/google-my-business-losing-customers",
   },
   {
     id: 6,
@@ -56,8 +57,8 @@ const blogPosts = [
     des: "One bad review doesn't have to define your brand. Here's the framework we use to turn reputation crises into trust.",
     category: "ORM",
     categoryColor: "#facc15",
-    emoji: "⭐",
-    href: "/blog",
+    image: "/blog-orm.webp",
+    href: "/blog/online-reputation-management-negative-reviews",
   },
 ];
 
@@ -76,31 +77,30 @@ const RecentProjects = () => {
           >
             <PinContainer title="Read Article" href={post.href}>
               <div className="flex flex-col w-[20rem] h-[25rem]">
+
                 {/* Image area */}
-                <div
-                  className="relative w-full h-44 rounded-2xl flex items-center justify-center overflow-hidden mb-4 flex-shrink-0"
-                  style={{
-                    backgroundColor: `${post.categoryColor}12`,
-                    border: `1px solid ${post.categoryColor}25`,
-                  }}
-                >
-                  <div
-                    className="absolute inset-0 opacity-20 blur-2xl"
-                    style={{
-                      background: `radial-gradient(circle, ${post.categoryColor}, transparent)`,
-                    }}
+                <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                    sizes="320px"
                   />
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/20" />
+                  {/* Category badge */}
                   <span
                     className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full border z-10"
                     style={{
-                      backgroundColor: `${post.categoryColor}20`,
+                      backgroundColor: `${post.categoryColor}30`,
                       color: post.categoryColor,
-                      borderColor: `${post.categoryColor}40`,
+                      borderColor: `${post.categoryColor}50`,
+                      backdropFilter: "blur(8px)",
                     }}
                   >
                     {post.category}
                   </span>
-                  <span className="text-6xl relative z-10">{post.emoji}</span>
                 </div>
 
                 {/* Title */}
@@ -109,10 +109,7 @@ const RecentProjects = () => {
                 </h3>
 
                 {/* Description */}
-                <p
-                  className="text-sm leading-relaxed line-clamp-2 flex-1"
-                  style={{ color: "#BEC1DD" }}
-                >
+                <p className="text-sm leading-relaxed line-clamp-2 flex-1" style={{ color: "#BEC1DD" }}>
                   {post.des}
                 </p>
 

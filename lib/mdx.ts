@@ -16,6 +16,7 @@ export type PostMeta = {
   readTime: string;
   author: string;
   authorRole: string;
+  coverImage?: string;
 };
 
 export type Post = PostMeta & {
@@ -24,7 +25,6 @@ export type Post = PostMeta & {
 
 export function getAllPosts(): PostMeta[] {
   if (!fs.existsSync(postsDirectory)) return [];
-
   const fileNames = fs.readdirSync(postsDirectory);
   const posts = fileNames
     .filter((f) => f.endsWith(".mdx"))
@@ -34,7 +34,6 @@ export function getAllPosts(): PostMeta[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
       const { text } = readingTime(content);
-
       return {
         slug,
         title: data.title || "",
@@ -46,21 +45,19 @@ export function getAllPosts(): PostMeta[] {
         readTime: text,
         author: data.author || "Optisutar Team",
         authorRole: data.authorRole || "Digital Marketing",
+        coverImage: data.coverImage || "",
       } as PostMeta;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
   return posts;
 }
 
 export function getPostBySlug(slug: string): Post | null {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
   if (!fs.existsSync(fullPath)) return null;
-
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   const { text } = readingTime(content);
-
   return {
     slug,
     title: data.title || "",
@@ -72,6 +69,7 @@ export function getPostBySlug(slug: string): Post | null {
     readTime: text,
     author: data.author || "Optisutar Team",
     authorRole: data.authorRole || "Digital Marketing",
+    coverImage: data.coverImage || "",
     content,
   };
 }
