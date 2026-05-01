@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const coverImage = coverImages[params.slug];
 
   return (
-    <main className="min-h-screen bg-[#080c1a] text-white">
+    <main className="min-h-screen bg-[#1f2d5a] text-white">
 
       {/* Hero */}
       <section className="relative pt-28 pb-10 px-6 overflow-hidden">
@@ -123,7 +123,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 priority
                 sizes="(max-width: 768px) 100vw, 1152px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080c1a]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1f2d5a]/60 to-transparent" />
             </>
           ) : (
             <div

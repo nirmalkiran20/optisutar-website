@@ -1,0 +1,34 @@
+# Query: #080c1a
+# Flags: CaseSensitive WordMatch RegExp
+# ContextLines: 1
+
+6 results - 5 files
+
+optisutar-website\app\about\page.tsx:
+  91    return (
+  92:     <main className="min-h-screen bg-[#161d35] text-white">
+  93  
+
+optisutar-website\app\audit\page.tsx:
+  260    return (
+  261:     <main className="min-h-screen bg-[#161d35] text-white">
+  262  
+
+optisutar-website\app\blog\page.tsx:
+  121    return (
+  122:     <main className="min-h-screen bg-[#161d35] text-white">
+  123  
+
+optisutar-website\app\blog\[slug]\page.tsx:
+   59    return (
+   60:     <main className="min-h-screen bg-[#161d35] text-white">
+   61  
+
+  125                />
+  126:               <div className="absolute inset-0 bg-gradient-to-t from-[#161d35]/60 to-transparent" />
+  127              </>
+
+optisutar-website\app\contact\page.tsx:
+  82    return (
+  83:     <main className="min-h-screen bg-[#161d35] text-white">
+  84  

@@ -119,7 +119,7 @@ function FeaturedBg() {
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-[#080c1a] text-white">
+    <main className="min-h-screen bg-[#1f2d5a] text-white">
 
       {/* Hero */}
       <section className="relative pt-28 pb-16 px-6 text-center overflow-hidden">

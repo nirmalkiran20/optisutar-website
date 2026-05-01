@@ -96,7 +96,7 @@ const Approach = () => {
 
             {/* Arrow connector — sits OUTSIDE the card, between cards */}
             {index < phases.length - 1 && (
-              <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-white/20 bg-[#04071d] items-center justify-center flex-shrink-0">
+              <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-white/20 bg-[#1f2d5a] items-center justify-center flex-shrink-0">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M2 7h10M7 2l5 5-5 5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

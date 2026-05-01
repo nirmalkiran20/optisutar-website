@@ -130,7 +130,7 @@ export const BentoGridItem = ({
               className={`absolute inset-0 w-full h-full object-cover ${cardImg.position} opacity-40 group-hover/bento:opacity-60 group-hover/bento:scale-105 transition-all duration-700`}
             />
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#04071d] via-[#04071d]/40 to-transparent group-hover/bento:via-[#04071d]/10 transition-all duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1f2d5a] via-[#1f2d5a]/40 to-transparent group-hover/bento:via-[#1f2d5a]/10 transition-all duration-500" />
           </>
         )}
 

@@ -80,7 +80,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#080c1a] text-white">
+    <main className="min-h-screen bg-[#1f2d5a] text-white">
 
       {/* Hero */}
       <section className="relative pt-28 pb-16 px-6 text-center overflow-hidden">
@@ -293,11 +293,11 @@ export default function ContactPage() {
                         </label>
                         <select
                           name="service" value={formData.service} onChange={handleChange}
-                          className="w-full bg-[#0e1228] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500/50 transition-all duration-200 cursor-pointer"
+                          className="w-full bg-[#1a2345] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500/50 transition-all duration-200 cursor-pointer"
                         >
                           <option value="">Select a service...</option>
                           {services.map((s) => (
-                            <option key={s} value={s} className="bg-[#0e1228]">{s}</option>
+                            <option key={s} value={s} className="bg-[#1a2345]">{s}</option>
                           ))}
                         </select>
                       </div>
