@@ -48,7 +48,7 @@ const services = [
 const CALENDLY_LINK = "https://calendly.com/optisutar/free-audit";
 
 const WhatsAppLink = () => {
-  const phone = "919876543210"; // ⚠️ Replace with your real number
+  const phone = "919890761073"; // ⚠️ Replace with your real number
   const message = encodeURIComponent(
     "Hi! I'd like to book a free SEO audit for my website."
   );

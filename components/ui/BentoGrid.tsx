@@ -61,7 +61,7 @@ const StatsCard = () => {
 };
 
 const WhatsAppButton = () => {
-  const phone = "919876543210";
+  const phone = "919890761073";
   const message = encodeURIComponent("Hi! I'd like to get a free SEO audit for my website.");
   const waLink = `https://wa.me/${phone}?text=${message}`;
   return (
